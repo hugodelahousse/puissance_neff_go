@@ -24,14 +24,11 @@ jobs:
             dep ensure
         fi
 
-    - name: Change directory to backend
-      run: cd backend
-
     - name: Check format
-      run: go fmt
+      run: cd backend && go fmt
 
     - name: Build
-      run: go build -v .
+      run: cd backend && go build -v .
 
     - name: Test
-      run: go test
+      run: cd backend && go test
