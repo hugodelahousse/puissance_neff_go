@@ -8,7 +8,7 @@ jobs:
     steps:
 
     - name: Change directory to backend
-      run: cd backend
+      run: pwd
 
     - name: Set up Go 1.13
       uses: actions/setup-go@v1
