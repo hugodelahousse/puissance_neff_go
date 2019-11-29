@@ -25,7 +25,7 @@ jobs:
         fi
 
     - name: Change directory to backend
-      run: pwd
+      run: cd backend
 
     - name: Check format
       run: go fmt
