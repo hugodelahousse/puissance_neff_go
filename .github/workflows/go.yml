@@ -25,7 +25,7 @@ jobs:
         fi
 
     - name: Check format
-      run: cd backend && ./golint.sh
+      run: cd backend && sudo ./golint.sh
 
     - name: Build
       run: cd backend && go build -v .
