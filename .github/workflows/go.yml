@@ -24,6 +24,9 @@ jobs:
             dep ensure
         fi
 
+    - name: Make golint.sh executable
+      run:  chmod +x ./backend/golint.sh
+
     - name: Check format
       run: ./backend/golint.sh
 
