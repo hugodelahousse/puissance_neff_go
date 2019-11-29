@@ -7,9 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - name: Change directory to backend
-      run: pwd
-
     - name: Set up Go 1.13
       uses: actions/setup-go@v1
       with:
@@ -26,6 +23,9 @@ jobs:
             curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
             dep ensure
         fi
+
+    - name: Change directory to backend
+      run: pwd
 
     - name: Check format
       run: go fmt
