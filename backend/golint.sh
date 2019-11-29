@@ -1,1 +1,1 @@
-if [ $(gofmt -l backend/ | wc -l) -ne 0 ]; then return 1; fi
+if [ $(gofmt -l . | wc -l) -ne 0 ]; then exit 1; fi
